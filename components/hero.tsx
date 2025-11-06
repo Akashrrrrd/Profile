@@ -9,10 +9,10 @@ export default function Hero() {
           <div className="space-y-2">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">Akash R</h1>
             <div className="text-xl sm:text-2xl md:text-3xl text-primary font-medium h-10 sm:h-12 flex items-center">
-              <TypingAnimation 
+              <TypingAnimation
                 texts={[
                   "Full Stack Developer",
-                  "React.js Enthusiast", 
+                  "React.js Enthusiast",
                   "Node.js Developer",
                   "Problem Solver"
                 ]}
@@ -28,14 +28,14 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
-              href="/CIT_22EC010_AKASH_R.pdf"
-              download="Akash_R_Resume.pdf"
+              href="/Akashr's Resume.pdf"
+              download="Akashr's Resume.pdf"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-center"
             >
               <Download className="w-5 h-5" />
               Download Resume
             </a>
-            
+
             <div className="flex gap-4 justify-center sm:justify-start">
               <a
                 href="https://linkedin.com/in/aaakashrajendran"
