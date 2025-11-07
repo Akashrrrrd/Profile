@@ -31,50 +31,33 @@ export default function QuoteSection() {
   ]
 
   return (
-    <section id="quote" className="px-4 sm:px-6 py-20 sm:py-24 bg-background relative overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
-          backgroundSize: '24px 24px'
-        }}></div>
-      </div>
-
-      <div className="max-w-5xl mx-auto relative">
-        {/* Classic Typography Header */}
+    <section id="quote" className="px-4 sm:px-6 py-20 sm:py-24 bg-secondary/20 relative">
+      <div className="max-w-4xl mx-auto">
+        {/* Professional Header */}
         <div className="text-center mb-16">
-          <div className="inline-block">
-            <div className="w-16 h-px bg-border mb-6"></div>
-            <h2 className="text-sm font-medium tracking-[0.2em] text-foreground/60 uppercase mb-2">Philosophy</h2>
-            <div className="w-16 h-px bg-border"></div>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Philosophy</h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
-        {/* Main Quote Block */}
-        <div className="max-w-3xl mx-auto">
-          {/* Opening Quote Mark */}
-          <div className="text-center mb-8">
-            <span className="text-6xl md:text-7xl font-serif text-primary/20 leading-none">"</span>
-          </div>
-
-          {/* Questions Grid */}
-          <div className={`space-y-6 mb-12 transform transition-all duration-1000 ${
+        {/* Clean Questions Layout */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className={`space-y-6 transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             {questions.map((item, idx) => (
               <div
                 key={idx}
-                className={`transform transition-all duration-700 delay-${idx * 150}`}
+                className={`transform transition-all duration-700`}
                 style={{ transitionDelay: `${idx * 150}ms` }}
               >
-                <div className="flex items-center justify-between py-4 px-6 border-l-2 border-border bg-card/30 backdrop-blur-sm">
-                  <span className="text-lg md:text-xl font-medium text-foreground tracking-wide">
+                <div className="flex items-center justify-between py-6 px-8 bg-card border border-border rounded-lg hover:shadow-md transition-all duration-300">
+                  <span className="text-lg md:text-xl font-medium text-foreground">
                     {item.question}
                   </span>
-                  <span className={`font-bold text-lg px-4 py-1 rounded-sm border ${
+                  <span className={`font-semibold text-lg px-4 py-2 rounded-md ${
                     item.answer === "Yes" 
-                      ? "text-emerald-700 border-emerald-200 bg-emerald-50 dark:text-emerald-400 dark:border-emerald-800 dark:bg-emerald-950/30" 
-                      : "text-slate-600 border-slate-200 bg-slate-50 dark:text-slate-400 dark:border-slate-700 dark:bg-slate-900/30"
+                      ? "text-emerald-700 bg-emerald-50 border border-emerald-200 dark:text-emerald-400 dark:bg-emerald-950/30 dark:border-emerald-800" 
+                      : "text-slate-600 bg-slate-50 border border-slate-200 dark:text-slate-400 dark:bg-slate-900/30 dark:border-slate-700"
                   }`}>
                     {item.answer}
                   </span>
@@ -82,40 +65,32 @@ export default function QuoteSection() {
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Philosophy Statement */}
-          <div className={`text-center transform transition-all duration-1000 delay-700 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}>
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed tracking-wide">
-              I don't chase <em className="font-medium text-primary not-italic">titles</em>,
-              <br className="hidden sm:block" />
-              I chase <em className="font-semibold text-primary not-italic">solutions</em>.
-            </blockquote>
-          </div>
-
-          {/* Closing Quote Mark */}
-          <div className="text-center mt-8">
-            <span className="text-6xl md:text-7xl font-serif text-primary/20 leading-none">"</span>
-          </div>
-
-          {/* Attribution */}
-          <div className={`text-center mt-8 transform transition-all duration-1000 delay-1000 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}>
-            <div className="inline-flex items-center gap-4">
-              <div className="w-8 h-px bg-border"></div>
-              <span className="text-sm font-medium tracking-wider text-foreground/60 uppercase">Akash R</span>
-              <div className="w-8 h-px bg-border"></div>
+        {/* Elegant Philosophy Statement */}
+        <div className={`text-center transform transition-all duration-1000 delay-700 ${
+          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl"></div>
+            <div className="relative bg-card/80 backdrop-blur-sm p-12 rounded-2xl border border-border shadow-lg">
+              <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed">
+                "I don't chase <span className="font-semibold text-primary">titles</span>,
+                <br className="hidden sm:block" />
+                I chase <span className="font-bold text-primary">solutions</span>."
+              </blockquote>
+              
+              {/* Attribution */}
+              <div className="mt-8 pt-6 border-t border-border/50">
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-12 h-px bg-border"></div>
+                  <span className="text-sm font-medium tracking-wider text-foreground/60 uppercase">Akash R</span>
+                  <div className="w-12 h-px bg-border"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Decorative Corner Elements */}
-        <div className="absolute top-8 left-8 w-8 h-8 border-l-2 border-t-2 border-border opacity-30"></div>
-        <div className="absolute top-8 right-8 w-8 h-8 border-r-2 border-t-2 border-border opacity-30"></div>
-        <div className="absolute bottom-8 left-8 w-8 h-8 border-l-2 border-b-2 border-border opacity-30"></div>
-        <div className="absolute bottom-8 right-8 w-8 h-8 border-r-2 border-b-2 border-border opacity-30"></div>
       </div>
     </section>
   )

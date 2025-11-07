@@ -52,6 +52,28 @@ export default function Projects() {
       highlights: ["1,500+ Active Users", "Real-time Content System", "Curated Resources"],
       category: "Full Stack",
     },
+    {
+      title: "sVIOS Technologies - Corporate Website",
+      description:
+        "Professional corporate website for sVIOS Technologies showcasing VLSI and IoT solutions with comprehensive service offerings and industry expertise.",
+      technologies: ["React", "Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
+      link: "https://sviostechnologies.com",
+      github: "https://github.com/Akashrrrrd/sVIOS-Technologies",
+      image: "/Project-5.png",
+      highlights: ["Corporate Branding", "VLSI & IoT Focus", "Professional Design"],
+      category: "Full Stack",
+    },
+    {
+      title: "LearnFree - Educational Platform",
+      description:
+        "Comprehensive learning management system designed for Chennai Institute of Technology students and teachers to collaborate effortlessly with modern UI/UX.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Authentication"],
+      link: "https://learn-free-ad52.vercel.app",
+      github: "https://github.com/Akashrrrrd/LearnFree",
+      image: "/Project-6.png",
+      highlights: ["Student-Teacher Collaboration", "Modern UI/UX", "Secure Authentication"],
+      category: "Full Stack",
+    },
   ]
 
   return (

@@ -26,7 +26,7 @@ export default function Stats() {
     },
     {
       icon: Coffee,
-      value: 1000,
+      value: 100,
       suffix: "+",
       label: "Cups of Coffee",
       description: "Fuel for coding sessions"
