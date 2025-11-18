@@ -1,5 +1,6 @@
 import { Linkedin, Github, Download } from "lucide-react"
 import TypingAnimation from "./typing-animation"
+import FreelancingPopup from "./freelancing-popup"
 
 export default function Hero() {
   return (
@@ -35,6 +36,8 @@ export default function Hero() {
               <Download className="w-5 h-5" />
               Download Resume
             </a>
+
+            <FreelancingPopup />
 
             <div className="flex gap-4 justify-center sm:justify-start">
               <a
