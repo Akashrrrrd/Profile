@@ -23,13 +23,18 @@ export default function FreelancingPopup() {
           Freelancing
         </button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md bg-background dark:bg-background border-border dark:border-border">
+      <DialogContent
+        className={
+          "bg-background dark:bg-background border-border dark:border-border top-0 left-0 translate-x-0 translate-y-0 h-full w-full max-w-full rounded-none p-4 overflow-auto " +
+          "sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%] sm:h-auto sm:w-auto sm:max-w-md sm:rounded-lg sm:p-6"
+        }
+      >
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2 text-2xl text-foreground dark:text-foreground">
-            <Briefcase className="w-6 h-6 text-primary" />
+          <DialogTitle className="flex items-center gap-2 text-xl sm:text-2xl font-semibold text-foreground dark:text-foreground">
+            <Briefcase className="w-5 h-5 text-primary" />
             Freelancing Opportunities
           </DialogTitle>
-          <DialogDescription className="text-foreground/70 dark:text-foreground/70">
+          <DialogDescription className="text-sm sm:text-base text-foreground/70 dark:text-foreground/70">
             I'm available for freelancing projects. Get in touch to discuss your requirements.
           </DialogDescription>
         </DialogHeader>
@@ -41,11 +46,11 @@ export default function FreelancingPopup() {
               <Mail className="w-4 h-4 text-primary" />
               Contact Me
             </h3>
-            <div className="space-y-3 pl-6">
+            <div className="space-y-2 pl-6">
               {/* Email */}
               <a
                 href="mailto:aakashrajendran2004@gmail.com"
-                className="flex items-center gap-3 p-3 rounded-lg border border-border dark:border-border hover:bg-secondary/50 dark:hover:bg-secondary/50 hover:border-primary/50 dark:hover:border-primary/50 transition-all group"
+                className="flex items-center gap-3 p-2 rounded-lg border border-border dark:border-border hover:bg-secondary/50 dark:hover:bg-secondary/50 hover:border-primary/50 dark:hover:border-primary/50 transition-all group"
               >
                 <Mail className="w-4 h-4 text-foreground/60 dark:text-foreground/60 group-hover:text-primary" />
                 <div className="flex-1">
@@ -59,7 +64,7 @@ export default function FreelancingPopup() {
               {/* Phone */}
               <a
                 href="tel:+919655667171"
-                className="flex items-center gap-3 p-3 rounded-lg border border-border dark:border-border hover:bg-secondary/50 dark:hover:bg-secondary/50 hover:border-primary/50 dark:hover:border-primary/50 transition-all group"
+                className="flex items-center gap-3 p-2 rounded-lg border border-border dark:border-border hover:bg-secondary/50 dark:hover:bg-secondary/50 hover:border-primary/50 dark:hover:border-primary/50 transition-all group"
               >
                 <Phone className="w-4 h-4 text-foreground/60 dark:text-foreground/60 group-hover:text-primary" />
                 <div className="flex-1">
@@ -78,9 +83,9 @@ export default function FreelancingPopup() {
               <Building2 className="w-4 h-4 text-primary" />
               Experience
             </h3>
-            <div className="space-y-3 pl-6">
+            <div className="space-y-2 pl-6">
               {/* Company */}
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-secondary/30 dark:bg-secondary/30">
+              <div className="flex items-start gap-3 p-2 rounded-lg bg-secondary/10 dark:bg-secondary/10">
                 <Building2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-foreground/60 dark:text-foreground/60">Company</p>
@@ -89,7 +94,7 @@ export default function FreelancingPopup() {
               </div>
 
               {/* Earnings */}
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-secondary/30 dark:bg-secondary/30">
+              <div className="flex items-start gap-3 p-2 rounded-lg bg-secondary/10 dark:bg-secondary/10">
                 <DollarSign className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-foreground/60 dark:text-foreground/60">Earned</p>
@@ -101,20 +106,22 @@ export default function FreelancingPopup() {
 
           {/* Call to Action */}
           <div className="pt-4 border-t border-border dark:border-border space-y-3">
-            <a
-              href="mailto:aakashrajendran2004@gmail.com?subject=Freelancing Inquiry"
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 dark:hover:bg-primary/90 transition-colors font-medium"
-            >
-              <Mail className="w-4 h-4" />
-              Send Email
-            </a>
-            <a
-              href="tel:+919655667171"
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-primary text-primary dark:text-primary rounded-lg hover:bg-primary/10 dark:hover:bg-primary/10 transition-colors font-medium"
-            >
-              <Phone className="w-4 h-4" />
-              Call Me
-            </a>
+            <div className="space-y-3">
+              <a
+                href="mailto:aakashrajendran2004@gmail.com?subject=Freelancing Inquiry"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 dark:hover:bg-primary/90 transition-colors font-medium"
+              >
+                <Mail className="w-4 h-4" />
+                Send Email
+              </a>
+              <a
+                href="tel:+919655667171"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary dark:text-primary rounded-lg hover:bg-primary/10 dark:hover:bg-primary/10 transition-colors font-medium"
+              >
+                <Phone className="w-4 h-4" />
+                Call Me
+              </a>
+            </div>
           </div>
         </div>
       </DialogContent>
